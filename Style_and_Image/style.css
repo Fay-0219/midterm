@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #aad4cf; /* Page color as required */
+}
+
+/* --- header --- */
+header {
+    position: relative; /* Reference to ensure h1 is absolutely positioned */
+    text-align: center; /* Keep the image and h1 centered */
+    width: 80%; /* Same width as main area */
+    margin: 0 auto;
+}
+
+.banner-img {
+    display: block; /* Remove the extra space down below the image */
+    width: 100%; /* give the header full wideth */
+    height: auto;
+}
+
+header h1 {
+    position: absolute; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    top: 60%; /* Adjust according to text and image, let the words below the seastar */
+    color: white;
+    font-size: 48px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin: 0; 
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* --- nav bar --- */
+nav {
+    background-color: #fbe3bc; /* Color the Nav Bar to Beachsand color, as no color specified */
+    text-align: center; /* Keep text centered */
+    padding: 15px 0; /* Set the top and bottom margins of the navigation bar */
+    box-sizing: border-box; /* Make sure the padding is within the width */
+    margin-top: 0; /* Remove the top spacing so it fits snugly to the bottom of the image */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between; /* Make the top edges of both ends of the items equal in distance between items */
+    font-size: 18px;
+}
+
+nav li {
+    margin: 0; /* Remove any default margins */
+    
+    flex-grow: 1; /* Make each li fill the available space evenly */
+    
+    /* Center the text inside each li */
+    text-align: center;
+    
+    /* Divider style */
+    border-right: 1px solid #0e0000; /* Add a dividing line */
+    
+    /* Adjust the padding so there is enough space between the text and the border */
+    padding: 15px 0; /* Adjust top and bottom margins */
+}
+
+/* 最后一个 li 不需要右侧边框 */
+nav li:last-child {
+    border-right: none;
+    padding-right: 0; /* The li above sets the left and right paddings, so also need to set them to 0 here. */
+    margin-right: 0;
+}
+
+nav a {
+    text-decoration: none; 
+    color: black; 
+    font-weight: bold; 
+}
+
+/* --- main --- */
+main {
+    width: 80%; /* Make image has same weidth with Nav bar */
+    margin: 0 auto; /* Center and touch the Nav bar */
+    padding: 20px;
+    background-color: #fbe3bc; /* Keep the background color same */
+    box-sizing: border-box; /* Make sure padding is in width */
+}
+
+/* --- 正文内容样式 --- */
+.article .starfish-info {
+    margin-bottom: 30px; /* Give enougth space at bottom */
+    overflow: hidden; /* Remove flow */
+}
+
+.inline-img {
+    float: left; /* Make the image float around text */
+    margin-right: 20px; /* Give some space at the right side of image, so it wont stick with text */
+    margin-bottom: 10px; /* Give little space at the bottom */
+    max-width: 200px; /* Keep the max weidth */
+    height: auto;
+}
+
+.facts ul {
+    padding-left: 20px; /* Set th left padding */
+}
+
+/* --- Contact --- */
+.contact {
+    border: 1px solid black; /* Set black border */
+    padding: 20px; /* Give space between border and */
+    margin-top: 30px; /* Give space between contact section and previous section */
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact label,
+.contact input {
+    margin: 10px 0;
+}
+
+.contact textarea {
+    margin: 10px 0;
+    height: 100px;
+}
+
+.contact button {
+    width: 100px;
+    padding: 10px;
+    background-color: #aad4cf;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+footer {
+    text-align: center; /* Center the text */
+    padding: 20px; /* inner distance */
+    font-size: 14px; /* font size */
+}
